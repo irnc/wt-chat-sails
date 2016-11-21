@@ -56,6 +56,10 @@ module.exports.connections = {
   * Run: npm install sails-mongo                                             *
   *                                                                          *
   ***************************************************************************/
+  mLabMongodbServer: {
+    adapter: 'sails-mongo',
+    url: process.env.MLAB_URI,
+  },
   // someMongodbServer: {
   //   adapter: 'sails-mongo',
   //   host: 'localhost',
