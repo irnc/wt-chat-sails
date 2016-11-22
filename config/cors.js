@@ -28,6 +28,20 @@
 
 module.exports.cors = {
 
+  /*
+
+  Config below results in following case:
+
+  curl -X OPTIONS -I -H "Origin: https://wt-chat.surge.sh" https://wt-chat-sails-hyeueupeez.now.sh/chat
+
+  Access-Control-Allow-Origin: https://wt-chat.surge.sh
+  Access-Control-Allow-Credentials: true
+  Access-Control-Expose-Headers:
+  Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, HEAD
+  Access-Control-Allow-Headers: content-type
+
+  */
+
   /***************************************************************************
   *                                                                          *
   * Allow CORS on all routes by default? If not, you must enable CORS on a   *
@@ -37,7 +51,7 @@ module.exports.cors = {
   *                                                                          *
   ***************************************************************************/
 
-  // allRoutes: false,
+  allRoutes: true,
 
   /***************************************************************************
   *                                                                          *
@@ -47,7 +61,7 @@ module.exports.cors = {
   *                                                                          *
   ***************************************************************************/
 
-  // origin: '*',
+  origin: '*',
 
   /***************************************************************************
   *                                                                          *
